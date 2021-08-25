@@ -14,13 +14,13 @@ export const MapContainer = (props) => {
         if (query) {
             searchByQuery(query);
         }
-    }, [query]);
+    }, [query]); // eslint-disable-line react-hooks/exhaustive-deps
 
     useEffect(() => {
         if (placeId) {
             getRestaurantById(placeId);
         }
-    }, [placeId]);
+    }, [placeId]); // eslint-disable-line react-hooks/exhaustive-deps
 
     function getRestaurantById(placeId) {
         const service = new google.maps.places.PlacesService(map);
